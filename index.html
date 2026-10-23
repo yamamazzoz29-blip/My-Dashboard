@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My-Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <aside>
+        <div>
+            <div class="logo-area">
+                <img src="186447.jpg" alt="صورة المستخدم">
+                <div>
+                    <h2>يمام عبد العزيز</h2>
+                    <p style="font-size: 12px; color: var(--text-light);">هندسة برمجيات</p>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li class="active">الرئيسية</li>
+                <li>موادي الدراسية</li>
+                <li>الدرجات والتقييم</li>
+                <li>الجدول الأسبوعي</li>
+                <li>الرسائل</li>
+                <li>الإعدادات</li>
+            </ul>
+        </div>
+        <div style="color: var(--rosewood); cursor: pointer; font-weight: 600; padding: 10px;">تسجيل الخروج</div>
+    </aside>
+
+    <main>
+        <header>
+            <h1>أهلاً بكِ، يمام</h1>
+            <div class="search-bar">بحث عن مواد، محاضرات...</div>
+        </header>
+
+        <div class="dashboard-grid">
+            <div class="column-left">
+                <div class="card">
+                    <h3>مواد الفصل الحالي (سنة 2 هندسة برمجيات)</h3>
+                    <div class="schedule-list">
+                        <div class="schedule-row">
+                            <span class="subject">قواعد معطيات 1</span>
+                            <span class="time">الأحد والثلاثاء</span>
+                        </div>
+                        <div class="schedule-row">
+                            <span class="subject">برمجة متقدمة 1</span>
+                            <span class="time">الثلاثاء والخميس</span>
+                        </div>
+                        <div class="schedule-row">
+                            <span class="subject">تحليل نظم معلومات</span>
+                            <span class="time">الإثنين والأربعاء</span>
+                        </div>
+                        <div class="schedule-row">
+                            <span class="subject">خوارزميات</span>
+                            <span class="time">الإثنين والخميس</span>
+                        </div>
+                        <div class="schedule-row">
+                            <span class="subject">تقانات إنترنت</span>
+                            <span class="time">الإثنين والأربعاء</span>
+                        </div>
+                        <div class="schedule-row">
+                            <span class="subject">إتصالات رقمية 1</span>
+                            <span class="time">الأحد</span>
+                        </div>
+                        <div class="schedule-row">
+                            <span class="subject">لغة إنجليزية 3</span>
+                            <span class="time">الأربعاء</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>الأحداث والامتحانات القادمة</h3>
+                    <div class="event-item">
+                        <span>تسليم مشروع قواعد البيانات 1</span>
+                        <span style="background: var(--peaches-cream); padding: 4px 10px; border-radius: 8px; font-size: 12px;">غداً</span>
+                    </div>
+                    <div class="event-item">
+                        <span>مناقشة مشروع التحليل</span>
+                        <span style="background: var(--dawn); padding: 4px 10px; border-radius: 8px; font-size: 12px;">الخميس القادم</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column-right">
+                <div class="card">
+                    <h3>مؤشرات الأداء</h3>
+                    
+                    <div class="stat-box">
+                        <h4>حضور المحاضرات</h4>
+                        <div class="progress-circle" style="background: conic-gradient(var(--rosewood) 85%, #f0e6e0 0);">85%</div>
+                    </div>
+
+                    <div class="stat-box">
+                        <h4>المهام المنجزة</h4>
+                        <div class="progress-circle" style="background: conic-gradient(var(--warm-steel) 90%, #f0e6e0 0);">90%</div>
+                    </div>
+
+                    <div class="stat-box">
+                        <h4>التقييم العام للفصل</h4>
+                        <div class="progress-circle" style="background: conic-gradient(var(--peaches-cream) 80%, #f0e6e0 0);">ممتاز</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

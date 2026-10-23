@@ -1,0 +1,260 @@
+:root {
+    --concrete: #525871;
+    --warm-steel: #857C91;
+    --rosewood: #CD9FA0;
+    --peaches-cream: #F2C1A3;
+    --dawn: #F8CCAA;
+    --bg-main: #FAF5F0;
+    --card-bg: #FFFFFF;
+    --text-dark: #3E4252;
+    --text-light: #7E8299;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-dark);
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+aside {
+    width: 260px;
+    background-color: var(--card-bg);
+    border-left: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.logo-area img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.logo-area h2 {
+    font-size: 20px;
+    color: var(--concrete);
+}
+
+.nav-links {
+    list-style: none;
+    flex-grow: 1;
+}
+
+.nav-links li {
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+.nav-links li.active, .nav-links li:hover {
+    background-color: var(--rosewood);
+    color: white;
+}
+
+main {
+    flex-grow: 1;
+    padding: 30px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: var(--concrete);
+    font-size: 24px;
+}
+
+.search-bar {
+    background: var(--card-bg);
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid #e2d9d2;
+    width: 300px;
+    color: var(--text-light);
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+}
+
+.column-left, .column-right {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(82, 88, 113, 0.05);
+}
+
+.card h3 {
+    color: var(--concrete);
+    margin-bottom: 15px;
+    font-size: 18px;
+    border-bottom: 2px solid var(--bg-main);
+    padding-bottom: 8px;
+}
+
+.event-item {
+    background: var(--bg-main);
+    padding: 12px 15px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.event-item span {
+    font-size: 14px;
+    color: var(--warm-steel);
+}
+
+.schedule-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.schedule-row {
+    display: flex;
+    justify-content: space-between;
+    background: var(--bg-main);
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.schedule-row .subject {
+    font-weight: 700;
+    color: var(--concrete);
+}
+
+.schedule-row .time {
+    color: var(--warm-steel);
+}
+
+.stat-box {
+    text-align: center;
+    padding: 15px;
+    background: var(--bg-main);
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.stat-box h4 {
+    color: var(--concrete);
+    margin-bottom: 8px;
+}
+
+.progress-circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: conic-gradient(var(--rosewood) 75%, #e2d9d2 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-weight: bold;
+    color: var(--concrete);
+}
+
+@media (max-width: 1024px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        height: auto;
+        overflow: auto;
+    }
+
+    aside {
+        width: 100%;
+        height: auto;
+        border-left: none;
+        border-bottom: 1px solid #eee;
+        padding: 15px;
+    }
+
+    .logo-area {
+        margin-bottom: 15px;
+    }
+
+    .logo-area img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .logo-area h2 {
+        font-size: 16px;
+    }
+
+    .nav-links {
+        display: flex;
+        overflow-x: auto;
+        gap: 8px;
+        padding-bottom: 5px;
+        white-space: nowrap;
+    }
+
+    .nav-links li {
+        margin-bottom: 0;
+        padding: 8px 12px;
+        font-size: 13px;
+        border-radius: 8px;
+    }
+
+    .logout-btn {
+        display: none;
+    }
+
+    main {
+        height: auto;
+        overflow: visible;
+        padding: 15px;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+}
